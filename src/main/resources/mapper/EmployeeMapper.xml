@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cookie.mybatis.mapper.EmployeeMapper" >
+    <!--填写映射-->
+    <select id="queryUserListLikeName" resultType="com.cookie.mybatis.model.Employee">
+        select * from t_employee where 1=1
+        <if test="username != null and username != ''">
+            AND username LIKE CONCAT(CONCAT('%',#{username},'%'))
+        </if>
+--         select * from t_employee where username like concat('%',#{username},'%')
+    </select>
+</mapper>
