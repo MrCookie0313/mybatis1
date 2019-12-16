@@ -14,6 +14,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.json.JsonbTester;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +32,7 @@ class EmployeeMapperTest {
 
     @Autowired
     EmployeeMapper employeeMapper;
+
     @Test
     void queryUserListLikeName() {
         List<Employee> employees = this.employeeMapper.queryUserListLikeName("");
@@ -36,8 +41,9 @@ class EmployeeMapperTest {
             System.out.println("employee = " + employee);
         }
     }
+
     @Test
-    public void Test1(){
+    public void Test1() {
         Page<Employee> page = PageHelper.startPage(1, 4);
         List<Employee> employees = employeeMapper.queryUserListLikeName("");
         PageInfo<Employee> pageInfo = new PageInfo<>(employees);
@@ -47,13 +53,20 @@ class EmployeeMapperTest {
     }
 
     @Test
-    public void Test2(){
-        List<String> list =new ArrayList<>();
+    public void Test2() {
+        List<String> list = new ArrayList<>();
         list.add("李四");
         list.add("赵六");
-        list.add("xiaoli");
+        list.add("zhaoli");
         System.out.println(JSON.toJSONString(list));
+        ZonedDateTime now = ZonedDateTime.now();
+        LocalDateTime localDateTime = now.toLocalDateTime();
+        System.out.println("now = " + now);
+        Object[] array = list.toArray();
+        for (int i = 0; i < array.length; i++) {
+            String str=(String) array[i];
+            System.out.println(str);
+        }
 
     }
-
 }

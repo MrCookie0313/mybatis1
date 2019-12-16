@@ -1,6 +1,7 @@
 package com.cookie.mybatis.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 /**
  * @author Sunbing
@@ -11,6 +12,22 @@ public class Employee {
     private Integer id;
     private String username;
     private String password;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(id, employee.id) &&
+                Objects.equals(username, employee.username) &&
+                Objects.equals(password, employee.password) &&
+                Objects.equals(entryTime, employee.entryTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, entryTime);
+    }
 
     private LocalDate entryTime= LocalDate.now();
 
