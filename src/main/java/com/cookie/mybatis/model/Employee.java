@@ -1,5 +1,7 @@
 package com.cookie.mybatis.model;
 
+import jdk.internal.org.objectweb.asm.ClassReader;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -9,6 +11,8 @@ import java.util.Objects;
  * @Version 1.0
  */
 public class Employee {
+    private ClassLoader classLoader;
+    private ClassReader classReader;
     private Integer id;
     private String username;
     private String password;

@@ -1,5 +1,6 @@
 package com.cookie.mybatis.controller;
 
+import org.springframework.stereotype.Indexed;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;
@@ -9,6 +10,7 @@ import us.codecraft.webmagic.processor.PageProcessor;
  * @date 2019/12/13 17:13
  * @Version 1.0
  */
+@Indexed
 public class MyPageProcessor implements PageProcessor {
 
     private Site site= new Site().setCharset("utf-8")

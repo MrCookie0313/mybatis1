@@ -6,17 +6,13 @@ import com.cookie.mybatis.model.Employee;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import jdk.nashorn.internal.runtime.linker.LinkerCallSite;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.json.JsonbTester;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,9 +60,18 @@ class EmployeeMapperTest {
         System.out.println("now = " + now);
         Object[] array = list.toArray();
         for (int i = 0; i < array.length; i++) {
-            String str=(String) array[i];
+            String str = (String) array[i];
             System.out.println(str);
         }
+
+    }
+
+    @Test
+    public void Test3() {
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("adbc");
+        arrayList.add("123");
+        arrayList.add("123L");
 
     }
 }
