@@ -20,6 +20,7 @@ public class WebMagicDemo {
                 .run();                   //启动爬虫
  
     }
+
  
  
 }

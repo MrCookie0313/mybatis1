@@ -2,6 +2,7 @@ package com.cookie.mybatis.model;
 
 import jdk.internal.org.objectweb.asm.ClassReader;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -10,7 +11,8 @@ import java.util.Objects;
  * @date 2019/12/3 16:23
  * @Version 1.0
  */
-public class Employee {
+public class Employee implements Serializable {
+    private static final long serialVersionUID = 3534838705214184947L;
     private ClassLoader classLoader;
     private ClassReader classReader;
     private Integer id;

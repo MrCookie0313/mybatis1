@@ -3,6 +3,7 @@ package com.cookie.mybatis.mapper;
 import com.cookie.mybatis.model.Employee;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
