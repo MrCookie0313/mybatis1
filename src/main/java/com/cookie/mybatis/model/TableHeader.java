@@ -15,7 +15,7 @@ public class TableHeader extends BaseRowModel implements Serializable {
     private static final long serialVersionUID = 1248912000701382172L;
     @ExcelProperty(value = "姓名",index = 0)
     private String name;
-    @ExcelProperty(value = "工号",index = 1)
+    @ExcelProperty(value = "工号2",index = 1)
     private String workNum;
     @ExcelProperty(value = "地址",index = 2)
     private String location;
