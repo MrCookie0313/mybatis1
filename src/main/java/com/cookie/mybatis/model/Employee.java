@@ -12,7 +12,7 @@ import java.util.Objects;
  * @Version 1.0
  */
 public class Employee implements Serializable {
-    private static final long serialVersionUID = 3534838705214184947L;
+    private static final long serialVersionUID = 4499999124604978656L;
     private Integer id;
     private String username;
     private String password;

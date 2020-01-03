@@ -3,8 +3,11 @@ package com.cookie.mybatis.model;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.metadata.BaseRowModel;
 
-public class ClsModal extends BaseRowModel {
+import java.io.Serializable;
 
+public class ClsModal extends BaseRowModel implements Serializable{
+
+	private static final long serialVersionUID = -1101867141713015589L;
 	@ExcelProperty(value = "班级编号", index = 0)
 	private Integer cid;
 

@@ -3,13 +3,16 @@ package com.cookie.mybatis.model;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.metadata.BaseRowModel;
 
+import java.io.Serializable;
+
 /**
  * @author Sunbing
  * @date 2019/12/20 9:57
  * @Version 1.0
  */
 
-public class TableHeader extends BaseRowModel {
+public class TableHeader extends BaseRowModel implements Serializable {
+    private static final long serialVersionUID = 1248912000701382172L;
     @ExcelProperty(value = "姓名",index = 0)
     private String name;
     @ExcelProperty(value = "工号",index = 1)
