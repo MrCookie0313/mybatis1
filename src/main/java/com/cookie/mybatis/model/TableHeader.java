@@ -13,7 +13,7 @@ public class TableHeader extends BaseRowModel {
     @ExcelProperty(value = "姓名",index = 0)
     private String name;
     @ExcelProperty(value = "工号",index = 1)
-    private String worknum;
+    private String workNum;
     @ExcelProperty(value = "地址",index = 2)
     private String location;
 
@@ -25,12 +25,12 @@ public class TableHeader extends BaseRowModel {
         this.name = name;
     }
 
-    public String getWorknum() {
-        return worknum;
+    public String getWorkNum() {
+        return workNum;
     }
 
-    public void setWorknum(String worknum) {
-        this.worknum = worknum;
+    public void setWorkNum(String workNum) {
+        this.workNum = workNum;
     }
 
     public String getLocation() {
