@@ -30,15 +30,23 @@ public class SearchNumData {
             return findKth(a, start, pivot - 1, k);
         }
     }
-    //快排，找枢纽，从大到小排序
+    /**
+     * 快排，找枢纽，从大到小排序
+     * @param a
+     * @param low
+     * @param high
+     * @return
+     */
     public static int partation(int[] a, int low, int high) {
         int key = a[low];
         while (low < high) {
-            while (low < high && a[high] <= key)
+            while (low < high && a[high] <= key) {
                 high--;
+            }
             a[low] = a[high];
-            while (low < high && a[low] >= key)
+            while (low < high && a[low] >= key) {
                 low++;
+            }
             a[high] = a[low];
         }
         a[low] = key;

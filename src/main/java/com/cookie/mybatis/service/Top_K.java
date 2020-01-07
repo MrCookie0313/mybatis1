@@ -4,7 +4,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Created by Hollake on 2019\6\19 0019 11:29.
+ * @author Sunbing
+ @date 2020-1-7
+ @Version 1.0
  */
 public class Top_K {
     public static void main(String[] args) {
