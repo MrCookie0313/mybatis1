@@ -23,7 +23,8 @@ public class FileUtils{
         if (!zipPath.exists()) {
             zipPath.mkdirs();
         }
-        File zipFile = new File(zipPath + File.separator + zipFilename);
+        File zipFile = new File(zipPath +File.separator + zipFilename);
+//        File zipFile = new File(zipPath + File.separator + zipFilename);
         try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipFile))) {
             writeZip(sourceFile, "", zos);
             //文件压缩完成后，删除被压缩文件
