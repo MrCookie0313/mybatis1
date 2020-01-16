@@ -33,7 +33,7 @@ public class Top_K {
     public static List<Integer> findTopK1(int[] input, int k) {
         List<Integer> list = new ArrayList<>();
 //        这里其实不用重写compare方法，因为默认的就是从小到大排序
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, Comparator.comparingInt(o -> o));
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, (o1, o2) -> o1 - o2);
         if (input == null || input.length < 1) {
             return list;
         }
